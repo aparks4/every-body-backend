@@ -12,6 +12,7 @@ django-on-heroku = "*"
 toml = "*"
 pycodestyle = "*"
 autopep8 = "*"
+dj-database-url = "*"
 
 [dev-packages]
 
