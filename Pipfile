@@ -13,6 +13,7 @@ toml = "*"
 pycodestyle = "*"
 autopep8 = "*"
 dj-database-url = "*"
+django-cors-headers = "*"
 
 [dev-packages]
 
