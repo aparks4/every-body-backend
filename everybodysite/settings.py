@@ -61,6 +61,7 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     "https://everybodyretreats.com",
     "http://localhost:3000",
+    "https://every-body-backend.herokuapp.com",
 ]
 
 CORS_ALLOW_METHODS = [
