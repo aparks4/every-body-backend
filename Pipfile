@@ -9,6 +9,9 @@ gunicorn = "*"
 django = "*"
 whitenoise = "*"
 django-on-heroku = "*"
+toml = "*"
+pycodestyle = "*"
+autopep8 = "*"
 
 [dev-packages]
 
