@@ -14,7 +14,6 @@ pycodestyle = "*"
 autopep8 = "*"
 dj-database-url = "*"
 django-cors-headers = "*"
-django-dotenv = "*"
 djangorestframework = "*"
 python-dotenv = "*"
 
