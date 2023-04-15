@@ -1,6 +1,6 @@
 from .models import TeamMember
 
-# from rest_framework import generics, status
+from rest_framework import generics
 from .serializers import TeamMemberSerializer
 # from rest_framework.decorators import api_view
 # from rest_framework.response import Response
