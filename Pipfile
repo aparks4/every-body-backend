@@ -16,6 +16,7 @@ dj-database-url = "*"
 django-cors-headers = "*"
 django-dotenv = "*"
 djangorestframework = "*"
+python-dotenv = "*"
 
 [dev-packages]
 
