@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', 'every-body-backend.herokuapp.com']
 
@@ -98,20 +98,12 @@ WSGI_APPLICATION = 'everybodysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-# import dj_database_url 
+import dj_database_url 
 
 # DATABASE_URL = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 DATABASES = {
-    # 'default': db_from_env
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ddcsp8fmbhldds',
-        'HOST': 'ec2-3-232-218-211.compute-1.amazonaws.com',
-        'PORT': 5432,
-        'USER': 'hkhrznegfvsiat',
-        'PASSWORD': '5186d88a5684b9183bd702ec72af393414a18d8830fa02ded7f5a1c45a71bc76', 
-    }
+    'default' : dj_database_url.config(conn_max_age=600)
 }
 
 REST_FRAMEWORK = {
