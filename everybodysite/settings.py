@@ -27,9 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['every-body-backend.herokuapp.com']
+ALLOWED_HOSTS = ['every-body-backend.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -98,24 +98,25 @@ WSGI_APPLICATION = 'everybodysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-import dj_database_url 
+# Production DB Config
 
-DATABASE_URL = dj_database_url.config(conn_max_age=600, ssl_require=True)
+# import dj_database_url 
 
-DATABASES = {
-    'default' : dj_database_url.config(conn_max_age=600)
-
-    
-
-
-}
+# DATABASE_URL = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 # DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'everybodysite',
-#     }
+#     'default' : dj_database_url.config(conn_max_age=600)
+
+
 # }
+
+# Local DB Config
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'everybodysite',
+    }
+}
 
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,

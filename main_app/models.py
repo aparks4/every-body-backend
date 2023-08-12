@@ -14,7 +14,8 @@ class TeamMember(models.Model):
 class Retreat (models.Model):
 
     name = models.CharField(max_length=100)
-    date = models.CharField(max_length=100)
+    dates = models.CharField(max_length=100)
+    description = models.TextField(max_length=2500, null=True)
     image = models.CharField(max_length=250)
     # itinerary = 
     # speakers =

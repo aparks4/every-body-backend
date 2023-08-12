@@ -15,4 +15,4 @@ class RetreatSerializer(serializers.HyperlinkedModelSerializer):
     )
     class Meta:
         model = Retreat
-        fields = ('name', 'date', 'registration_url', 'id')
+        fields = ('name', 'dates', 'description', 'registrationURL', 'edit_link', 'id')
