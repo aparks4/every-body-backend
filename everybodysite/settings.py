@@ -29,7 +29,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', 'every-body-backend.herokuapp.com']
+ALLOWED_HOSTS = ['every-body-backend.herokuapp.com']
 
 
 # Application definition
@@ -104,10 +104,8 @@ DATABASE_URL = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 DATABASES = {
     'default' : dj_database_url.config(conn_max_age=600)
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': 'everybodysite',
-    # }
+
+    
 
 
 }
