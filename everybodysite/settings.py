@@ -100,11 +100,24 @@ WSGI_APPLICATION = 'everybodysite.wsgi.application'
 
 import dj_database_url 
 
-# DATABASE_URL = dj_database_url.config(conn_max_age=600, ssl_require=True)
+DATABASE_URL = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
 DATABASES = {
     'default' : dj_database_url.config(conn_max_age=600)
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'everybodysite',
+    # }
+
+
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'everybodysite',
+#     }
+# }
 
 REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
@@ -161,5 +174,5 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Configure Django App for Heroku
-import django_on_heroku
-django_on_heroku.settings(locals())
+# import django_on_heroku
+# django_on_heroku.settings(locals())
