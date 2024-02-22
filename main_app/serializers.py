@@ -24,4 +24,4 @@ class ResourceSerializer(serializers.HyperlinkedModelSerializer):
     )
     class Meta:
         model = Resource
-        fields = ('name', 'url', 'description')
+        fields = ('name', 'url', 'description', 'edit_link', 'id')
