@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import TeamMember, Retreat
+from .models import TeamMember, Retreat, Resource
 
 class RetreatAdmin(admin.ModelAdmin):
     list_display = ('name', 'dates')  # Fields to display in the list view
@@ -9,3 +9,4 @@ class RetreatAdmin(admin.ModelAdmin):
 # Register your models here.
 admin.site.register(TeamMember)
 admin.site.register(Retreat, RetreatAdmin)
+admin.site.register(Resource)
