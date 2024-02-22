@@ -1,7 +1,7 @@
-from .models import TeamMember, Retreat
+from .models import TeamMember, Retreat, Resource
 
 from rest_framework import generics
-from .serializers import TeamMemberSerializer, RetreatSerializer
+from .serializers import TeamMemberSerializer, RetreatSerializer, ResourceSerializer
 # from rest_framework.decorators import api_view
 # from rest_framework.response import Response
 # from django.http import JsonResponse
@@ -29,3 +29,11 @@ class RetreatList(generics.ListCreateAPIView):
 class RetreatDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Retreat.objects.all()
     serializer_class = RetreatSerializer
+    
+class ResourceList(generics.ListCreateAPIView):
+    queryset = Resource.objects.all()
+    serializer_class = ResourceSerializer
+
+class ResourceDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Resource.objects.all()
+    serializer_class = ResourceSerializer

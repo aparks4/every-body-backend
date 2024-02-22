@@ -23,16 +23,16 @@ class Retreat (models.Model):
 
     def __str__(self):
         return f'{self.date}'
+    
 
+class Resource (models.Model):
 
-# class Speaker (models.Model):
-#     name = models.CharField(max_length=100)
-#     image = models.CharField(max_length=250, required=False)
-#     description = models.TextField(max_length=500)
-#     retreats = # associated Retreat
+    name = models.CharField(max_length=100)
+    url = models.CharField(max_length=120)
+    description = models.TextField(max_length=1200, null=True, blank=True)
 
-#     def __str__(self):
-#         return f'{self.name}'
+    def __str__(self):
+        return f'{self.name}'
 
 
 
