@@ -22,7 +22,7 @@ class Retreat (models.Model):
     registrationURL = models.CharField(max_length=200)
 
     def __str__(self):
-        return f'{self.date}'
+        return f'{self.name}'
     
 
 class Resource (models.Model):
