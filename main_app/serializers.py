@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import TeamMember, Retreat, Resource
+from .models import TeamMember, Retreat, Resource, ResourceCategory
 
 class TeamMemberSerializer(serializers.HyperlinkedModelSerializer):
     edit_link = serializers.ModelSerializer.serializer_url_field(
@@ -17,6 +17,14 @@ class RetreatSerializer(serializers.HyperlinkedModelSerializer):
         model = Retreat
         fields = ('name', 'dates', 'image', 'description', 'registrationURL', 'edit_link', 'id')
 
+class ResourceCategorySerializer(serializers.HyperlinkedModelSerializer):
+    edit_link = serializers.ModelSerializer.serializer_url_field(
+        view_name='resource_category_detail'
+    )
+    class Meta:
+        model = ResourceCategory
+        fields = ('name', 'edit_link', 'id')
+
 
 class ResourceSerializer(serializers.HyperlinkedModelSerializer):
     edit_link = serializers.ModelSerializer.serializer_url_field(
@@ -24,4 +32,4 @@ class ResourceSerializer(serializers.HyperlinkedModelSerializer):
     )
     class Meta:
         model = Resource
-        fields = ('name', 'url', 'description', 'edit_link', 'id')
+        fields = ('name', 'url', 'description', 'category', 'edit_link', 'id')

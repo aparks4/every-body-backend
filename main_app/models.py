@@ -24,12 +24,20 @@ class Retreat (models.Model):
     def __str__(self):
         return f'{self.name}'
     
+class ResourceCategory (models.Model):
+
+    name = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.name
+    
 
 class Resource (models.Model):
 
     name = models.CharField(max_length=100)
     url = models.CharField(max_length=120)
     description = models.TextField(max_length=1200, null=True, blank=True)
+    category = models.ForeignKey(ResourceCategory, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
         return f'{self.name}'

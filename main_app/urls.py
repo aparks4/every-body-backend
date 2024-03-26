@@ -11,5 +11,7 @@ urlpatterns = [
     path('retreats/<int:pk>/', views.RetreatDetail.as_view(), name="retreat_detail"),
     path('resources', views.ResourceList.as_view(), name="resource_list"),
     path('resources/<int:pk>/', views.ResourceDetail.as_view(), name="resource_detail"),
+    path('resource_categories', views.ResourceCategoryList.as_view(), name="resource_category_list"),
+    path('resource_categories/<int:pk/', views.ResourceCategoryDetail.as_view(), name="resource_category_detail"),
      
 ]
